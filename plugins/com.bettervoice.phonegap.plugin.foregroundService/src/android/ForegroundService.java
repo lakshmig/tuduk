@@ -87,7 +87,12 @@ public class ForegroundService extends Service {
         int normalIcon = getResources().getIdentifier("icon", "drawable", getPackageName());
         int notificationIcon = getResources().getIdentifier("notification", "drawable", getPackageName());         
         if(notificationIcon != 0) {
-        	Log.d("ONSTARTCOMMAND", "Found Custom Notification Icon!");
+        	Log.d("ON
+                
+                
+                
+                
+                COMMAND", "Found Custom Notification Icon!");
         	icon = notificationIcon;
         }
         else if(normalIcon != 0) {
@@ -123,7 +128,7 @@ public class ForegroundService extends Service {
 		//handleOnStart(intent);
 		Log.d("ONSTARTCOMMAND", "intent" + intent);
 
-        startForeground(1337, getActivityNotification(this.notificationTitle, this.notificationText));
+        startForeground(notif_id, getActivityNotification(this.notificationTitle, this.notificationText));
 		return START_STICKY;
 	}
 
